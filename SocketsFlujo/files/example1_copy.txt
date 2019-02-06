@@ -1,0 +1,2 @@
+Hola mundo, este es un archivo en texto plano.
+Otra línea
