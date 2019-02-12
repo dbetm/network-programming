@@ -243,7 +243,6 @@ public class Servidor extends javax.swing.JFrame {
     }//GEN-LAST:event_btnIniciarActionPerformed
 
     
-    
     private void btnDetenerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetenerActionPerformed
         try {
             // Cerramos la conexión si no está cerrada
@@ -256,6 +255,7 @@ public class Servidor extends javax.swing.JFrame {
             this.lblEstado.setText("No conectado");
             this.txtPuerto.setEnabled(true);
             this.btnIniciar.setEnabled(true);
+            this.servidor.close();
         } 
         catch (IOException ex) {
             ex.printStackTrace();
