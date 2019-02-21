@@ -62,7 +62,7 @@ public class Cliente {
     
     public static void main(String args[]) {
         Cliente c = new Cliente("127.0.0.1", 5500);
-        c.elegirArchivo("/home/david/Dropbox/Dev/C/Operadores_carne.c");
+        c.elegirArchivo("/home/david/Dropbox/Dev/Ruby/holaMundo.rb");
         c.enviarArchivo();
     }
 }
