@@ -35,17 +35,19 @@ public class Servidor {
             byte buffer[] = new byte[1024];
             this.recibe = new DatagramPacket(buffer, buffer.length);
             int i = 0;
+            // Tiempo de espera
+            this.servidor.setSoTimeout(10000);
             while(true) {
                 this.servidor.receive(this.recibe);
-                if(this.recibe.getLength() == 0) break;
                 this.bos.write(this.recibe.getData(), 0, this.recibe.getLength());
-                System.out.println(i++ +1);
+                System.out.println(i++);
+                if(this.recibe.getLength() < 1024) break;
             }
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException ex) {
-            ex.printStackTrace();
+            //ex.printStackTrace();
         }
         finally {
             try {

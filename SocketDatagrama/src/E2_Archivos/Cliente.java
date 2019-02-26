@@ -22,7 +22,7 @@ public class Cliente {
     private File myFile;
     // para leer el archivo que se indique con File
     private BufferedInputStream bis;
-    private long lenPaquete;
+    private int lenPaquete;
 
     public Cliente(String path) { 
         this.lenPaquete = 1024;
@@ -30,7 +30,7 @@ public class Cliente {
             this.socket = new DatagramSocket();
             this.myFile = new File(path);
             this.bis = new BufferedInputStream(new FileInputStream(this.myFile));
-            this.numPaquetes = (long)Math.ceil(this.myFile.length() / this.lenPaquete);
+            this.numPaquetes = (long)Math.ceil((double)this.myFile.length() / (double)this.lenPaquete);
             System.out.println(this.numPaquetes);
         }
         catch (SocketException | FileNotFoundException e) {
@@ -42,9 +42,9 @@ public class Cliente {
         byte buffer[];
         try {
             for (int j = 0; j < this.numPaquetes; j++) {
-                buffer = new byte[(int)this.lenPaquete];
+                buffer = new byte[this.lenPaquete];
                 bis.read(buffer, 0, buffer.length);
-                System.out.println("Núm paquete: " + j+1);
+                System.out.println("Núm paquete: " + j);
                 this.envio = new DatagramPacket(buffer, buffer.length,
                     InetAddress.getByName("127.0.0.1"), 5500);
                 this.socket.send(this.envio);
@@ -56,7 +56,7 @@ public class Cliente {
         // Cerramos el buffer de lectura y el envío
         try {
            this.bis.close(); 
-           this.socket.close();
+           //this.socket.close();
         } 
         catch (Exception e) {
             e.printStackTrace();
