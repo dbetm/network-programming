@@ -9,8 +9,10 @@ import java.net.URL;
 import java.net.UnknownHostException;
 
 /**
- *
- * @author david
+ * Equipo: David Betancourt Montellano + Onder Francisco Campos García
+ * Tema del programa: Cliente DNS
+ * Descripción: Puede enviar peticiones al servidor para resolver IPv4's y dominios
+ * Fecha: 19 de marzo del 2019.
  */
 public class Cliente {
     private DatagramPacket envio;
@@ -150,25 +152,31 @@ public class Cliente {
     public static void main(String args[]) {
         System.out.println("Soy cliente");
         Cliente c = new Cliente(5500);
-        String ip = "192.168.00.01";
+        String ip = "28.49.49.23";
         String dominio = "http://www.google.com";
+        
+        String ip2 = "45.57.105.29";
+        String dominio2 = "http://www.facebook.com";
+        
+        String ip3 = "182.141.224.0";
+        String dominio3 = "http://www.codesignal.com";
         String ips[];
         URL url;
-        if(Cliente.validarIPv4(ip)) {
+        if(Cliente.validarIPv4(ip3)) {
             try {
                 // Enviamos una IP y esperamos recibir un dominio
-                url = c.resolverIP(ip);
+                url = c.resolverIP(ip3);
                 // Imprimimos la representación de la URL
-                System.out.println("Resolución de IP: " + ip + " => " + url.toString());
+                System.out.println("Resolución de IP: " + ip3 + " => " + url.toString());
                 
                 // Enviamos un dominio y esperamos recibir un arreglo de IPs
-                ips = c.resolverDominio(new URL(dominio));
-                System.out.println("Resolución de dominio: " + dominio + " => ");
+                ips = c.resolverDominio(new URL(dominio3));
+                System.out.println("Resolución de dominio: " + dominio3 + " => ");
                 // Mostramos cada una de las IP's:
                 for (int i = 0; i < ips.length; i++) {
                     System.out.println(ips[i]);
                 }
-                
+  
             }
             catch (MalformedURLException ex) {
                 ex.printStackTrace();
