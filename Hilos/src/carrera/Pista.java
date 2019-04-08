@@ -13,6 +13,7 @@ public class Pista extends javax.swing.JFrame {
     private Octocat octo3;
     private Octocat octo4;
     private String url[];
+    private String posiciones[]; // recurso a compartirse
     /**
      * Creates new form Pista
      */
@@ -25,6 +26,7 @@ public class Pista extends javax.swing.JFrame {
             "files/octo3.png",
             "files/octo4.png"
         };
+        this.posiciones = new String[4];
         disponerOctocats();
     }
     
@@ -34,16 +36,20 @@ public class Pista extends javax.swing.JFrame {
         this.lblOcto2.setText("");
         this.lblOcto3.setText("");
         this.lblOcto4.setText("");
+        this.lblOcto1.setName("Octo 1");
+        this.lblOcto2.setName("Octo 2");
+        this.lblOcto3.setName("Octo 3");
+        this.lblOcto4.setName("Octo 4");
         // los reacomodamos
         this.lblOcto1.setLocation(this.lblOcto1.getX(), 490);
         this.lblOcto2.setLocation(this.lblOcto2.getX(), 490);
         this.lblOcto3.setLocation(this.lblOcto3.getX(), 490);
         this.lblOcto4.setLocation(this.lblOcto4.getX(), 490);
         // Instanciamos
-        this.octo1 = new Octocat(this.lblOcto1, url[0]);
-        this.octo2 = new Octocat(this.lblOcto2, url[1]);
-        this.octo3 = new Octocat(this.lblOcto3, url[2]);
-        this.octo4 = new Octocat(this.lblOcto4, url[3]);
+        this.octo1 = new Octocat(this.lblOcto1, url[0], posiciones);
+        this.octo2 = new Octocat(this.lblOcto2, url[1], posiciones);
+        this.octo3 = new Octocat(this.lblOcto3, url[2], posiciones);
+        this.octo4 = new Octocat(this.lblOcto4, url[3], posiciones);
     }
 
     /**
@@ -165,6 +171,7 @@ public class Pista extends javax.swing.JFrame {
 
     // ## INICIAR LA CARRERA
     private void btnIniciarCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarCarreraActionPerformed
+        for (int i = 0; i < 4; i++) this.posiciones[i] = null;
         if(this.btnIniciarCarrera.getText().equals("REINICIAR")) {
             disponerOctocats();
         }
