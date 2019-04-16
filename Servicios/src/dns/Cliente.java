@@ -14,6 +14,7 @@ import java.net.UnknownHostException;
  * Descripción: Puede enviar peticiones al servidor para resolver IPv4's y dominios
  * Fecha: 19 de marzo del 2019.
  */
+
 public class Cliente {
     private DatagramPacket envio;
     private DatagramPacket recibe;

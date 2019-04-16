@@ -45,8 +45,8 @@ public class ClienteNIO {
         SelectionKey selectionKey = datagramChannel.register(selector,SelectionKey.OP_READ);
         selectionKey.attach(file);
         sendRequest(file, datagramChannel);
-
     }
+    
     private void sendRequest(String fileName, DatagramChannel dChannel)throws IOException {
         String mode = "octet";
         ByteBuffer rrqByteBuffer = crearRequest(OP_RRQ, fileName, mode);

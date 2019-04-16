@@ -27,7 +27,6 @@ public class Servidor {
     public Servidor() {
         URLs = new URL[100000000];
         Ips = new ArrayList[100000000];
-        this.puerto = puerto;
         try {
             this.datagramSocket = new DatagramSocket(puerto);
         }
@@ -88,7 +87,7 @@ public class Servidor {
     private String buscarIP(URL url){
         int hashUrl=calcularHashCode(url.toString());
         if(Ips[hashUrl]!=null){
-          return Arrays.toString(Ips[hashUrl].toArray());  
+            return Arrays.toString(Ips[hashUrl].toArray());  
         }
         System.out.println("Dominio no encontrado");
         return "404";
@@ -115,7 +114,7 @@ public class Servidor {
     
     private String recibirIPs() {
          String ips = "";
-        // Vamos a recibir un string con las direcciones IP
+        // Vamos a recibir un string con la dirección IP
         byte buffer[] = new byte[2048];
         this.recibe = new DatagramPacket(buffer, buffer.length);
         try {
@@ -139,7 +138,7 @@ public class Servidor {
                 this.datagramSocket = new DatagramSocket();
                 // Instanciamos el envío
                 this.envio = new DatagramPacket(buffer, buffer.length,
-                        InetAddress.getLocalHost(), 8080);
+                    InetAddress.getLocalHost(), 8080);
                 // enviamos
                 this.datagramSocket.send(this.envio);
             }

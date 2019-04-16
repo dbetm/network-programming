@@ -96,7 +96,7 @@ public class Cliente {
             //Paso 2.1: recibe paquete del servidor TFTP 
             datagramSocket.receive(entrada);
 
-            // Obtener los primeros 4 caracteres  del paquete tftp para conocer la opc-code
+            // Obtener los primeros 2 caracteres  del paquete tftp para conocer la op-code
             byte[] opCode = { buffer[0], buffer[1] };
             if (opCode[1] == OP_ERROR) reportarError();
             else if (opCode[1] == OP_DATAPACKET) {
@@ -254,7 +254,7 @@ public class Cliente {
     public static void main(String[] args) throws IOException {
         String fileName = "logo.png";
         Cliente tFTPClient = new Cliente();
-        tFTPClient.get(fileName);
+        //tFTPClient.get(fileName);
         tFTPClient.put();
     }
 }
