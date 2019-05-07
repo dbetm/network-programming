@@ -7,7 +7,7 @@
 #include "DATE_PROG.h"
 
 
-void date_prog_1(char *host) {
+void date_prog_1(char *host, char *res) {
 	CLIENT *clnt;
 	long  *result_1;
 	char *bin_date_1_arg;
@@ -22,17 +22,22 @@ void date_prog_1(char *host) {
 	}
 #endif	/* DEBUG */
 
-	/*
-    result_1 = bin_date_1((void*)&bin_date_1_arg, clnt);
-	if (result_1 == (long *) NULL) {
-		clnt_perror (clnt, "call failed");
-	}
-    */
-    str_date_1_arg = 1234567890;
-	result_2 = str_date_1(&str_date_1_arg, clnt);
-	if (result_2 == (char **) NULL) {
-		clnt_perror (clnt, "call failed");
-	}
+    if(strcmp(res, "null") == 0) {
+        result_1 = bin_date_1((void*)&bin_date_1_arg, clnt);
+    	if (result_1 == (long *) NULL) {
+    		clnt_perror (clnt, "call failed");
+    	}
+        printf("Opción 1\n");
+    }
+    else {
+        str_date_1_arg = atoi(res);
+    	result_2 = str_date_1(&str_date_1_arg, clnt);
+    	if (result_2 == (char **) NULL) {
+    		clnt_perror (clnt, "call failed");
+    	}
+        printf("Opción 2\n");
+    }
+
 #ifndef	DEBUG
 	clnt_destroy (clnt);
 #endif	 /* DEBUG */
@@ -42,12 +47,12 @@ void date_prog_1(char *host) {
 int main (int argc, char *argv[]) {
 	char *host;
 
-	if (argc < 2) {
+	if (argc < 3) {
 		printf ("usage: %s server_host\n", argv[0]);
 		exit (1);
 	}
 	host = argv[1];
-	date_prog_1 (host);
+	date_prog_1 (host, argv[2]);
 
     exit (0);
 }

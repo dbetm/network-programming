@@ -12,6 +12,9 @@ long * bin_date_1_svc(void *argp, struct svc_req *rqstp) {
 	/*
 	 * insert server code here
 	 */
+    printf("Bin date\n");
+    long a = 404;
+    result = a;
 	return &result;
 }
 
