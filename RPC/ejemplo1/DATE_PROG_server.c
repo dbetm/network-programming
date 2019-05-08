@@ -6,25 +6,36 @@
 
 #include "DATE_PROG.h"
 #include <stdio.h>
+#include <sys/time.h>
+#include <time.h>
+
+long current_timestamp();
 
 long * bin_date_1_svc(void *argp, struct svc_req *rqstp) {
-	static long  result;
+	static long result;
 	/*
 	 * insert server code here
 	 */
-    printf("Bin date\n");
-    long a = 404;
-    result = a;
+    printf("Date en long\n");
+    result = current_timestamp();
 	return &result;
 }
 
 char ** str_date_1_svc(long *argp, struct svc_req *rqstp) {
 	static char * result;
-	/*
-	 * insert server code here
-	 */
-    printf("Hola mundo\n");
-    char a = 'a';
-    result = &a;
+    printf("Date en char\n");
+    time_t t = time(NULL);
+    struct tm *tm = localtime(&t);
+    result = asctime(tm);
+    //printf("%s", asctime(tm));
 	return &result;
+}
+
+long current_timestamp() {
+    struct timeval te;
+    gettimeofday(&te, NULL); // get current time
+    // calculate milliseconds
+    long milliseconds = te.tv_sec * 1000LL + te.tv_usec / 1000;
+    // printf("milliseconds: %lld\n", milliseconds);
+    return milliseconds/10000;
 }

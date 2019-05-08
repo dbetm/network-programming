@@ -27,7 +27,8 @@ void date_prog_1(char *host, char *res) {
     	if (result_1 == (long *) NULL) {
     		clnt_perror (clnt, "call failed");
     	}
-        printf("Opción 1\n");
+        long long int timestamp = (*result_1) * 10000;
+        printf("%lld\n", timestamp);
     }
     else {
         str_date_1_arg = atoi(res);
@@ -35,7 +36,7 @@ void date_prog_1(char *host, char *res) {
     	if (result_2 == (char **) NULL) {
     		clnt_perror (clnt, "call failed");
     	}
-        printf("Opción 2\n");
+        printf("%s\n", *result_2);
     }
 
 #ifndef	DEBUG
@@ -46,9 +47,8 @@ void date_prog_1(char *host, char *res) {
 
 int main (int argc, char *argv[]) {
 	char *host;
-
 	if (argc < 3) {
-		printf ("usage: %s server_host\n", argv[0]);
+		printf ("usage: %s server_host opt[null | #]\n", argv[0]);
 		exit (1);
 	}
 	host = argv[1];
