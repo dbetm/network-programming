@@ -1,3 +1,4 @@
+// Aquí definimos la interfaz de nuestro módulo
 program DATE_PROG {
     version DATE_VERS {
         long BIN_DATE(void) = 1;    /*Procedimiento #1*/
