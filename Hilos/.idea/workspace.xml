@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f751ab9-d0a6-45a6-ac78-d5193d9b980d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/reloj/Reloj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reloj/Reloj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Servicios/build/classes/dns/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Servicios/build/classes/dns/Cliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Servicios/build/classes/dns/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Servicios/build/classes/dns/Servidor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Servicios/build/classes/tftp/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Servicios/build/classes/tftp/Cliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Servicios/build/classes/tftp/ClienteNIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Servicios/build/classes/tftp/ClienteNIO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Servicios/src/dns/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Servicios/src/dns/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Servicios/src/dns/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Servicios/src/dns/Servidor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Servicios/src/tftp/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Servicios/src/tftp/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Servicios/src/tftp/ClienteNIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Servicios/src/tftp/ClienteNIO.java" afterDir="false" />
-    </list>
+    <list default="true" id="6f751ab9-d0a6-45a6-ac78-d5193d9b980d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf />
@@ -52,28 +46,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Hilos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hilos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hilos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hilos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../computational-biology/genetic-algorithms" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -101,16 +80,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <frame x="67" y="36" width="1293" height="743" extended-state="6" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980047" />
+      <window_info content_ui="combo" id="Project" order="0" show_stripe_button="false" weight="0.2542101" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -118,12 +94,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
   </component>
   <component name="editorHistoryManager">
