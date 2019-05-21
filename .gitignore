@@ -7,3 +7,9 @@
 /Hilos/build/
 /RMI/nbproject/private/
 /RMI/build/
+/ChatRMI_Interfaces/nbproject/private/
+/ChatRMI_Servidor/nbproject/private/
+/ChatRMI_Cliente/nbproject/private/
+/ChatRMI_Servidor/build/
+/ChatRMI_Interfaces/build/
+/ChatRMI_Cliente/build/
