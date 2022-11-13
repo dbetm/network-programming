@@ -13,3 +13,9 @@
 /ChatRMI_Servidor/build/
 /ChatRMI_Interfaces/build/
 /ChatRMI_Cliente/build/
+/chatp2p/nbproject/private/
+/chatp2p/build/
+/TestRMI/nbproject/private/
+/TestRMI/build/
+
+*.class
