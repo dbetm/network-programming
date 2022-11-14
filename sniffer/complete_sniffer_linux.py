@@ -6,9 +6,9 @@ import time
 #Convert a string of 6 characters of ethernet address
 # into a dash separated hex string
 def eth_addr(a):
-  b = '%.2x:%.2x:%.2x:%.2x:%.2x:%.2x' % (int(a[0]) , int(a[1]) , int(a[2]), int(a[3]), int(a[4]) , int(a[5]))
-
-  return b
+    b = '%.2x:%.2x:%.2x:%.2x:%.2x:%.2x' % (int(a[0]) , int(a[1]) , int(a[2]), int(a[3]), int(a[4]) , int(a[5]))
+    
+    return b
 
 # Create INET, STREAMing socket
 try:
@@ -16,6 +16,9 @@ try:
 except Exception as e:
     print('Socket could not be created')
     sys.exit()
+
+"""Raw mode is basically there to allow you to bypass some of the way that your computer handles TCP/IP. Rather than going through the normal layers of encapsulation/decapsulation that the TCP/IP stack on the kernel does, you just pass the packet to the application that needs it. No TCP/IP processing -- so it's not a processed packet, it's a raw packet.
+"""
 
 # Recibir un paquete
 while True:
